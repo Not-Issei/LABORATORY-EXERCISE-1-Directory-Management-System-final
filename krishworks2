@@ -1,51 +1,51 @@
 #include <iostream>
 #include <string>
 
-Void displayFiles() {
-    Std::cout << “\n--- List of Files in Current Directory ---\n”;
-    
-  
-    Std::cout << “1. File1.txt\n”;
-    Std::cout << “2. File2.cpp\n”;
-    Std::cout << “3. Report.doc\n”;
-    Std::cout << “4. Image.png\n”;
-    
-    Std::cout << “\nPress Enter to return to the main menu…\n”;
-    Std::cin.ignore().get();  
 
-Void createDirectory() {
-    Std::cout << “\nEnter the name of the new directory: “;
-    Std::string dirname;
-    Std::cin >> dirname;
-
-    Std::cout << “\nDirectory ‘” << dirname << “’ created successfully!\n”;
-    Std::cout << “Press Enter to return to the main menu…\n”;
-    Std::cin.ignore().get(); 
+void displayFiles() {
+    std::cout << "\n--- List of Files in Current Directory ---\n";
+    std::cout << "1. File1.txt\n";
+    std::cout << "2. File2.cpp\n";
+    std::cout << "3. Report.doc\n";
+    std::cout << "4. Image.png\n";
+    std::cout << "\nPress Enter to return to the main menu…\n";
+    std::cin.ignore().get();  
 }
 
-Void changeDirectory() {
-    Std::cout << “\nEnter the name of the directory to move into: “;
-    Std::string dirname;
-    Std::cin >> dirname;
 
-    Std::cout << “\nChanged to directory: C:\\Users\\UserName\\” << dirname << “\n”;
-    Std::cout << “Press Enter to return to the main menu…\n”;
-    Std::cin.ignore().get();  
+void createDirectory() {
+    std::cout << "\nEnter the name of the new directory: ";
+    std::string dirname;
+    std::cin >> dirname;
+    std::cout << "\nDirectory '" << dirname << "' created successfully!\n";
+    std::cout << "Press Enter to return to the main menu…\n";
+    std::cin.ignore().get(); 
+}
 
-Int main() {
-    While (true) {
-        Std::cout << “\n--- Main Menu ---\n”;
-        Std::cout << “1. Display List of Files\n”;
-        Std::cout << “2. Create New Directory\n”;
-        Std::cout << “3. Change the Working Directory\n”;
-        Std::cout << “4. Exit\n”;
-        Std::cout << “Enter your choice (1-4): “;
+void changeDirectory() {
+    std::cout << "\nEnter the name of the directory to move into: ";
+    std::string dirname;
+    std::cin >> dirname;
+    std::cout << "\nChanged to directory: C:\\Users\\UserName\\" << dirname << "\n";
+    std::cout << "Press Enter to return to the main menu…\n";
+    std::cin.ignore().get();  
+}
+
+
+int main() {
+    while (true) {
+        std::cout << "\n--- Main Menu ---\n";
+        std::cout << "1. Display List of Files\n";
+        std::cout << "2. Create New Directory\n";
+        std::cout << "3. Change the Working Directory\n";
+        std::cout << "4. Exit\n";
+        std::cout << "Enter your choice (1-4): ";
         
-        Int choice;
-        Std::cin >> choice;
+        int choice;
+        std::cin >> choice;
 
-        Switch (choice) {
-            Case 1:
+        switch (choice) {
+            case 1:
                 displayFiles();
                 break;
             case 2:
@@ -55,12 +55,11 @@ Int main() {
                 changeDirectory();
                 break;
             case 4:
-                std::cout << “\nExiting program. Goodbye!\n”;
+                std::cout << "\nExiting program. Goodbye!\n";
                 return 0;  
             default:
-                std::cout << “\nInvalid option. Please enter a number between 1 and 4.\n”;
+                std::cout << "\nInvalid option. Please enter a number between 1 and 4.\n";
         }
     }
 }
-
 
